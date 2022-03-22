@@ -12,13 +12,18 @@
 
         <div>
             <label for="goal">Goal</label>
-            <input type="text" id="goal">
-            <button>Add Goal</button>
+            <input type="text" id="goal" v-model="enteredValue">
+            <button v-on:click="addGoal">Add Goal</button>
         </div>
         <ul>
-            <li>Test</li>
+           <li v-for="goal in goals">{{ goal }}</li>
+           <!-- loops all the goals into goals array in app.js -->
         </ul>
     </div>
+    <!-- add vue BEFORE the app.js script -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+
     <script src="app.js"></script>
 
     
